@@ -35,6 +35,7 @@ function App() {
   const dispatch = useDispatch();
   const todoListActive = todoList.filter((todoItem) => !todoItem.isCompleted);
   const todoListCompleted = todoList.filter((todoItem) => todoItem.isCompleted);
+  const [newTodoList, setNewTodoList] = useState(todoList);
   return (
     <>
       <div
@@ -143,6 +144,14 @@ function App() {
                 : '',
               borderBottomLeftRadius: 0,
               borderBottomRightRadius: 0,
+              minHeight:
+                todoListStatus === 'active' || todoListStatus === 'completed'
+                  ? 412
+                  : '',
+              maxHeight:
+                todoListStatus === 'active' || todoListStatus === 'completed'
+                  ? 412
+                  : '',
             }}
           >
             <TodoListContainer

@@ -16,6 +16,8 @@ const todoReducer = (state = [], action) => {
       }));
     case 'CLEAR_COMPLETED_LIST_ITEMS':
       return state.filter((todoItem) => !todoItem.isCompleted);
+    case 'REORDER_TODO_ITEM':
+      return [...action.payload];
     default:
       return state;
   }

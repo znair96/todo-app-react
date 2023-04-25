@@ -32,3 +32,9 @@ export const markCompletedListItem = (todoId) => {
     payload: todoId,
   };
 };
+export const reorderTodoList = (reorderList) => {
+  return {
+    type: 'REORDER_TODO_ITEM',
+    payload: reorderList,
+  };
+};

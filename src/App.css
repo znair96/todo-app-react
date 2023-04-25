@@ -121,3 +121,54 @@
   justify-content: center;
   gap: 18px;
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header-background-light,
+  .header-background-dark {
+    background: url(./assets/bg-desktop-light.jpg);
+  }
+  .header-background-dark {
+    background: url(./assets/bg-desktop-dark.jpg);
+  }
+  .header-content {
+    width: 84%;
+    margin: auto;
+  }
+  .text-field,
+  .text-field-dark {
+    width: 84%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .drag {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header-background-light,
+  .header-background-dark {
+    background: url(./assets/bg-desktop-light.jpg);
+    height: 224.5px;
+  }
+  .header-background-dark {
+    background: url(./assets/bg-desktop-dark.jpg);
+  }
+  .header-content {
+    width: 40%;
+    margin: auto;
+  }
+  .text-field,
+  .text-field-dark {
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .drag {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+  }
+}
